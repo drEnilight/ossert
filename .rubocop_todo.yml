@@ -22,16 +22,6 @@ Metrics/AbcSize:
     - 'lib/ossert/project.rb'
     - 'lib/ossert/reference.rb'
 
-Metrics/BlockLength:
-  Exclude:
-    - 'ossert.gemspec'
-    - 'lib/ossert/tasks/ossert.rake'
-    - 'lib/ossert/tasks/database.rake'
-    - 'lib/ossert/classifiers/cluster.rb'
-    - 'spec/ossert_spec.rb'
-    - 'spec/spec_helper.rb'
-    - 'spec/ossert_stats_spec.rb'
-
 Metrics/ClassLength:
   Exclude:
     - 'lib/ossert/fetch/github.rb'
