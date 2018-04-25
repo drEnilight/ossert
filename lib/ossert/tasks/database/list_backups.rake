@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require 'uri'
+require 'ossert/tasks/helpers/database_task_helper'
 
 namespace :db do
-  task :load_config do
-    DB = Sequel.connect(ENV.fetch('DATABASE_URL'))
-  end
+  include DatabaseTaskHelper
 
   desc 'Show the existing database backups'
   task :list_backups do
