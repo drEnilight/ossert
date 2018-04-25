@@ -38,8 +38,8 @@ module DatabaseTaskHelper
     "pg_restore -d '#{db_url}' -F #{fmt} -v -c #{file}"
   end
 
-  def current_version(db)
-    db.tables.include?(:schema_info) && db[:schema_info].first[:version] || 0
+  def current_version(database)
+    database.tables.include?(:schema_info) && database[:schema_info].first[:version] || 0
   end
 
   def drop_db(uri)
