@@ -61,6 +61,11 @@ module DatabaseTaskHelper
     end
   end
 
+  def rebuild_db
+    Rake::Task['db:drop'].invoke
+    Rake::Task['db:create'].invoke
+  end
+
   def suffix_for_format(suffix)
     case suffix
     when 'c' then 'dump'
